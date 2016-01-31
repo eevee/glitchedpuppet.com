@@ -1,0 +1,12 @@
+@import "vendor/flex";
+
+.front-page-link-grid {
+    @include flexbox;
+    @include flex-wrap(wrap);
+    @include justify-content(space-around);
+
+    > a {
+        @include flex(0 0 auto);
+        display: block;
+    }
+}
