@@ -1,4 +1,16 @@
 @import "vendor/flex";
+@import "defs";
+
+html, body {
+    min-height: 100%;
+}
+body {
+    background: url(/static/images/global-background.png) $body-bg-color;
+    background-image:
+        linear-gradient(to bottom, 0% rgba(#4c0057, 0.5), 600px rgba(#4c0057, 0)),
+        linear-gradient(to top, 0% rgba(#4c0057, 0.25), 200px rgba(#4c0057, 0)),
+        url(/static/images/global-background.png);
+}
 
 .front-page-link-grid {
     @include flexbox;
@@ -9,4 +21,26 @@
         @include flex(0 0 auto);
         display: block;
     }
+}
+
+.glip-header {
+    @include flexbox;
+    @include justify-content(center);
+    margin: 1em auto;
+
+    a, img {
+        display: block;
+    }
+}
+.glip-header-banner {
+    @include flex(0 0 auto);
+}
+.glip-header-icons {
+    @include flex(0 0 auto);
+}
+
+.tile {
+    background: #fffcfa;
+    border-color: $primary-accent;
+    box-shadow: 1px 1px 3px rgba(128, 128, 96, 0.3);
 }

@@ -9,34 +9,21 @@
 
 
 <%block name="main_header">
-    <div class="forflor-header">
-            <img src="${request.static_url('spline:assets/images/global-header-left.png')}" alt="[Orobas]" class="forflor-header--left">
-            <img src="${request.static_url('spline:assets/images/global-header-logo.png')}" alt="Forbidden Flora (18+ only!), updates Tue/Thur/Sun" class="forflor-header--logo">
-            <img src="${request.static_url('spline:assets/images/global-header-right.png')}" alt="[Andre looking proud of his graffiti]" class="forflor-header--right">
+    <div class="glip-header">
+        <div class="glib-header-banner">
+            <a href="/"><img src="${request.static_url('spline:assets/images/global-banner.png')}" alt="glitched puppet ♥ illustrator, writer, musician"></a>
+        </div>
+        <div class="glib-header-icons">
+            <a href="https://www.patreon.com/floraverse"><img src="${request.static_url('spline:assets/images/global-icon-patreon.png')}" alt="[patreon]"></a>
+            <a href="https://twitter.com/glitchedpuppet"><img src="${request.static_url('spline:assets/images/global-icon-twitter.png')}" alt="[twitter]"></a>
+            <a href="http://glitchedpuppet.tumblr.com/"><img src="${request.static_url('spline:assets/images/global-icon-tumblr.png')}" alt="[tumblr]"></a>
+            <a href="http://glitchedpuppet.deviantart.com/"><img src="${request.static_url('spline:assets/images/global-icon-deviantart.png')}" alt="[deviantart]"></a>
+        </div>
     </div>
     <nav class="forflor-navbar">
         <ul class="inline plain">
-            <li><a href="https://www.patreon.com/forbiddenflora"><img src="${request.static_url('spline:assets/images/global-link-patreon.png')}" alt="early access on Patreon"></a></li>
-            <li><a href="/"><img src="${request.static_url('spline:assets/images/global-link-home.png')}" alt="Home"></a></li>
-            <li><a href="${request.route_url('comic.archive')}"><img src="${request.static_url('spline:assets/images/global-link-archive.png')}" alt="Archive"></a></li>
-            <li><img src="${request.static_url('spline:assets/images/global-link-wiki.png')}" alt="Wiki" style="opacity: 0.3;"></li>
-            <li><a href="/about"><img src="${request.static_url('spline:assets/images/global-link-about.png')}" alt="About"></a></li>
-            <li><a href="irc://irc.veekun.com/forbiddenflora"><img src="${request.static_url('spline:assets/images/global-link-chat.png')}" alt="Chat"></a></li>
         </ul>
     </nav>
-</%block>
-
-<%block name="extra_global_nav">
-    ${parent.extra_global_nav()}
-    <li><a href="irc://irc.veekun.com/forbiddenflora">Chat</a></li>
-</%block>
-
-<%block name="main">
-    <div class="ad ad-728x90">
-        <!--/* 728x90 */-->
-        (ad block)
-    </div>
-    ${parent.main()}
 </%block>
 
 ${next.body()}
